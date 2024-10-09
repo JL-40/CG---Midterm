@@ -15,7 +15,7 @@ Shader "Midterm/ToonShader"
         float4 _Color;
         sampler2D _ToonRampTex;
 
-        float4 LightingToonRamp(SurfaceOutput s, fixed2 lightDir, fixed atten)
+        float4 LightingToonRamp(SurfaceOutput s, fixed3 lightDir, fixed atten)
         {
             float diff = dot(s.Normal, lightDir);
             float h = diff * 0.5 + 0.5;
